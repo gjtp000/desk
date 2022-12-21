@@ -1,0 +1,193 @@
+@charset "utf-8";
+
+/* 폰트 : 프리텐다드 */
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* 초기화 */
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-family: 'Pretendard-Regular';
+}
+a, a:visited {
+    color: #000;
+    text-decoration: none;
+}
+input {
+    display: none;
+}
+
+/* 전체화면 */
+.area {
+    width: 100vw;
+    height: 100vh;
+    margin: 0 auto;
+    position: relative;
+}
+
+.wrapper {
+    width: 95%;
+    height: 90%;
+    margin: auto auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* 타이틀 */
+.title img {
+    height: 21px;
+    vertical-align: middle;
+}
+.title h3 {
+    display: inline-block;
+    font-size: 24px;
+    line-height: 24px;
+    vertical-align: middle;
+    margin-left: 10px;
+}
+
+/* 미리보기 전체 */
+.preview {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    bottom: 0;
+    width: 100%;
+    height: 95%;
+}
+
+/* 비주얼 영역 */
+.visual {
+    position: relative;
+    width: 70%;
+    height: 100%;
+    background-color: rgb(248, 248, 248);
+    overflow: hidden;
+    border-radius: 15px;
+}
+.visual img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+}
+
+/* 옵션 영역 */
+.option {
+    width: 28%;
+    height: 100%;
+    background-color: rgb(240, 240, 240);
+    border-radius: 15px;
+}
+.option .op {
+    width: 90%;
+    margin: 0 auto;
+}
+.option .op strong {
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    text-align: center;
+}
+.option .op div {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    text-align: center;
+}
+.option .color div label {
+    display: inline-block;
+    background-color: rgb(240, 240, 240);
+    width: 25%;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+.option .op div label:hover {
+    background-color: rgb(230, 228, 228);
+}
+input:first-child:checked ~ .area .color label:nth-child(1) {
+    background-color: #fff;
+}
+#white:checked ~ .area .color label:nth-child(2) {
+    background-color: #fff;
+}
+#pink:checked ~ .area .color label:nth-child(3) {
+    background-color: #fff;
+}
+#carbon:checked ~ .area .color label:nth-child(4) {
+    background-color: #fff;
+}
+#sprite:checked ~ .area .color label:nth-child(5) {
+    background-color: #fff;
+}
+#light:checked ~ .area .color label:nth-child(6) {
+    background-color: #fff;
+}
+#dark:checked ~ .area .color label:nth-child(7) {
+    background-color: #fff;
+}
+#walnut:checked ~ .area .color label:nth-child(8) {
+    background-color: #fff;
+}
+.option .op img {
+    width: 30px;
+    height: 30px;
+    margin-top: 5px;
+    border-radius: 2px;
+}
+.option .color div label p {
+    font-size: 12px;
+    color: #555;
+}
+.option .size div label p {
+    font-size: 14px;
+    line-height: 30px;
+}
+.option .size div label {
+    display: inline-block;
+    background-color: rgb(240, 240, 240);
+    width: 33%;
+    height: 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+#small:checked ~ .area .size label:nth-child(1) {
+    background-color: #fff;
+}
+#middle:checked ~ .area .size label:nth-child(2) {
+    background-color: #fff;
+}
+#large:checked ~ .area .size label:nth-child(3) {
+    background-color: #fff;
+}
+.option .shape div label p {
+    font-size: 14px;
+    line-height: 30px;
+}
+.option .shape div label {
+    display: inline-block;
+    background-color: rgb(240, 240, 240);
+    width: 50%;
+    height: 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+#basic:checked ~ .area .shape label:nth-child(1) {
+    background-color: #fff;
+}
+#curve:checked ~ .area .shape label:nth-child(2) {
+    background-color: #fff;
+}
